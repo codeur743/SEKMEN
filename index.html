@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEKMEN — Visualiseur IFC & Chatbot Énergie</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-logo">☀️</span>
+        <h1>SEKMEN</h1>
+        <span class="brand-tag">Visualiseur IFC • Énergie</span>
+      </div>
+      <div class="header-actions">
+        <button id="btn-load" class="btn btn-primary" title="Charger un fichier IFC">
+          📂 Charger IFC
+        </button>
+        <button id="btn-measure" class="btn" title="Mesurer entre 2 points (M)">
+          📏 Mesurer
+        </button>
+        <button id="btn-reset-view" class="btn" title="Recadrer la vue">
+          🎯 Recadrer
+        </button>
+        <input type="file" id="file-input" accept=".ifc" hidden />
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section id="viewer" class="viewer">
+        <div id="drop-hint" class="drop-hint">
+          <div class="drop-hint-box">
+            <div class="drop-hint-icon">🏢</div>
+            <h2>Glissez un fichier IFC ici</h2>
+            <p>ou cliquez sur <strong>📂 Charger IFC</strong> en haut à droite</p>
+          </div>
+        </div>
+        <div id="progress" class="progress hidden">
+          <div class="progress-bar"><div id="progress-fill"></div></div>
+          <div id="progress-text">Chargement...</div>
+        </div>
+        <div id="measure-hud" class="measure-hud hidden">
+          📏 Mode mesure — cliquez le <strong>point A</strong>
+        </div>
+      </section>
+
+      <aside class="chat">
+        <div class="chat-header">
+          <span>💬 Assistant SEKMEN</span>
+          <button id="btn-clear-chat" class="btn-icon" title="Effacer">🗑️</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div id="chat-suggestions" class="chat-suggestions"></div>
+        <form id="chat-form" class="chat-input">
+          <input
+            id="chat-input"
+            type="text"
+            placeholder="Pose ta question... (ex: surface du bâtiment)"
+            autocomplete="off"
+          />
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+      </aside>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
