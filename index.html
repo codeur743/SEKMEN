@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SEKMEN — Visualiseur IFC & Chatbot Énergie</title>
-    <script type="module" crossorigin src="./assets/index-Bg9p127Z.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-_UbGA8kt.css">
+    <script type="module" crossorigin src="./assets/index-GCqWfA3N.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DyNHWor5.css">
   </head>
   <body>
     <header class="app-header">
@@ -124,15 +124,24 @@
             </div>
             <div class="weather-table-wrap">
               <table class="weather-table">
+                <colgroup>
+                  <col class="c-date" />
+                  <col class="c-day" />
+                  <col class="c-num" />
+                  <col class="c-num" />
+                  <col class="c-num" />
+                  <col class="c-sun" />
+                  <col class="c-rain" />
+                </colgroup>
                 <thead>
                   <tr>
-                    <th>Date</th>
-                    <th>Jour</th>
-                    <th>Min (°C)</th>
-                    <th>Moy (°C)</th>
-                    <th>Max (°C)</th>
-                    <th>Ensoleillement</th>
-                    <th>Pluie (mm)</th>
+                    <th class="th-left">Date</th>
+                    <th class="th-left">Jour</th>
+                    <th class="th-right">Min (°C)</th>
+                    <th class="th-right">Moy (°C)</th>
+                    <th class="th-right">Max (°C)</th>
+                    <th class="th-right">Ensoleillement</th>
+                    <th class="th-right">Pluie (mm)</th>
                   </tr>
                 </thead>
                 <tbody id="weather-tbody"></tbody>
